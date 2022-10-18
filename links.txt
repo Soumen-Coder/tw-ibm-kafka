@@ -5,7 +5,7 @@ Kafka Introduction
 https://docs.google.com/presentation/d/1jCKBneCyi08Qh2PIrwLMldxUCX7PEqA5KMi-PaJFU_o/edit?usp=sharing
 
 
-Reactive programming & Services
+Reactive Programming & Services
 
 https://developing-furniture-976.notion.site/Why-Reactive-672f250f22a84623a6a8bfc7d663784b
 https://developing-furniture-976.notion.site/Reactive-0d55c2ee7c8a41b29d5b7e32e715394e
