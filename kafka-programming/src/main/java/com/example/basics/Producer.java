@@ -1,4 +1,4 @@
-package com.example;
+package com.example.basics;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
-import java.util.concurrent.Future;
 
 public class Producer {
     private static Logger log = LoggerFactory.getLogger(Producer.class);
@@ -17,14 +16,14 @@ public class Producer {
         log.info("Starting Producer...");
 
         final Properties producerProperties = new Properties();
-        producerProperties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "43.205.254.81:9092");
+        producerProperties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         producerProperties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         producerProperties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(producerProperties);
 
         for (int i = 0; i < 10; i++) {
-            String topic = "ibm-topic";
+            String topic = "greetings";
             String key = "key_" + Integer.toString(i);
             String value = "hello world - " + Integer.toString(i);
             ProducerRecord<String, String> producerRecord = new ProducerRecord<>(topic, key, value);
